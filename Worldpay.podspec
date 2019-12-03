@@ -3,7 +3,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'Worldpay'
-  s.version      = '1.6.1'
+  s.version      = '1.6.2'
   s.summary      = 'Worldpay iOS Library'
 
   s.description  = <<-DESC
@@ -31,5 +31,5 @@ Pod::Spec.new do |s|
   s.requires_arc            = true
   s.weak_frameworks         = 'UIKit', 'Foundation', 'CoreGraphics'
 
-  s.ios.dependency 'AFNetworking'
+  s.ios.dependency 'AFNetworking', :subspecs => ['Reachability', 'Serialization', 'Security', 'NSURLSession']
 end
